@@ -2,7 +2,7 @@
 
 Overview
 ============
-This project helps train a classifier to be able to detect [PE files](https://en.wikipedia.org/wiki/Portable_Executable) as either malicious or legitimate. It tries out 6 different classification algorithms before deciding which one to use for prediction by comparing their results. This is the code for 'Build an Antivirus in 5 Min' on [Youtube](https://youtu.be/iLNHVwSu9EA).
+This project helps train a classifier to be able to detect [PE files](https://en.wikipedia.org/wiki/Portable_Executable) as either malicious or legitimate. It tries out 6 different classification algorithms before deciding which one to use for prediction by comparing their results. 
 
 Dependencies
 ============
@@ -24,6 +24,4 @@ Basic Usage
 
 That's it!
 
-Credits
-===========
-Credit for the vast majority of code here goes to [Te-k](https://github.com/Te-k). I've merely created a wrapper around all of the important functions to get people started.
+
