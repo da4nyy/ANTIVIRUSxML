@@ -30,31 +30,37 @@ import sys
 import getopt
 
 
-def myfunc(argv):
+import getopt
+import sys
+
+def get_args(argv):
     arg_input = ""
     arg_output = ""
-    arg_help = "{0} -i <directory to scan> -o <alert log file>".format(argv[0])
-    
+
+    arg_help = "{0} -i <input directory> -o <output directory> ".format(argv[0])
+
     try:
-        opts, args = getopt.getopt(argv[1:], "hi:o:", ["help", "d=", 
-         "output="])
+        opts, args = getopt.getopt(argv[1:], "hi:o", ["help", "input=", "output="])
     except:
         print(arg_help)
         sys.exit(2)
-    
+
     for opt, arg in opts:
         if opt in ("-h", "--help"):
-            print(arg_help)  # print the help message
+            print(arg_help)
             sys.exit(2)
         elif opt in ("-i", "--input"):
             arg_input = arg
-            print('repository to scan :', arg_input)
+            print('input directory:', arg_input)
 
         elif opt in ("-o", "--output"):
             arg_output = arg
-            print('output file:', arg_output)
+            print('output directory:', arg_output)
+
+
     l = [arg_input,arg_output]
-    return l 
+    return l
+
 
 
 
@@ -310,6 +316,7 @@ def integrity():
         # compare two dict of hashes
         for diff in list(dictdiffer.diff(old_hash, new_hash)):         
             # ALERT
+
             log_change(ALERT_FILE, diff)
         
         # save the new hash
@@ -366,7 +373,7 @@ if __name__ == "__main__":
     l=[]
     SCAN_DIRECTORY = '.'
     ALERT_FILE = 'alert.log'
-    l= myfunc(sys.argv)
+    l= get_args(sys.argv)
     if l[0]!="":
         SCAN_DIRECTORY = l[0]
     if l[1]!="":

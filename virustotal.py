@@ -126,7 +126,11 @@ class VTScan:
             print (Colors.RED + "failed to get information :(" + Colors.ENDC)
             print (Colors.RED + "status code: " + str(res.status_code) + Colors.ENDC)
             sys.exit()
-
+def hand_sign(signum, frame):
+    res = input("Ctrl-c was pressed. Do you really want to exit? y/n ")
+    if res == 'y':
+        print(red,"QUitting !")
+        exit(1)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-m','--mal', required = True, help = "PE file path for scanning")
