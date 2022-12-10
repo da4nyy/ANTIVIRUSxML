@@ -3,7 +3,7 @@
 
 
 """
-BASIC File Integrity Monitor
+File Integrity Monitor with malware detection
 
 @author: DA4NY
 """
@@ -76,7 +76,7 @@ def get_args(argv):
 #===============
 # Colors
 #===============
-# Normal
+# Normal 
 black="\033[0;30m"
 red="\033[0;31m"
 green="\033[0;32m"
@@ -101,7 +101,7 @@ bwhite="\033[1;37m"
 #======================
 
 def banner():
-	logo='''
+    logo='''
 '''+byellow+'''                                   
 '''''' mmmm     mm      mm  mm   mm     m
 '''''' #   "m   ##     m"#  #"m  # "m m" 
@@ -109,19 +109,24 @@ def banner():
 '''''' #    #  #mm#  #mmm#m #  # #   #   
 '''''' #mmm"  #    #     #  #   ##   #   
 ''''''                                   
-                                   
-BASIC File Integrity Monitor
+                                
+'''+byellow+''' ++ File Integrity Monitor ith Malware Detection ++ 
 
-Developed to be used in CTF 
-
-Creates alerts for:
+'''+bblue+''' 
+*) Creates alerts for:
         - added files
         - removed files
         - changed files
 
+*) detect if the added / changed file is a malware       
+
+*) checks the signature of the file with virustotal api 
+
+'''+red+''' 
 @author: DA4NY
+
 '''+bwhite+''''''
-	print(white,logo)
+    print(logo)
 
 
 
@@ -374,9 +379,11 @@ def malware_detection(diff):
           if test[1]=="add":
               file_to_scan = test[5]
           
-          print(bgreen,"[+] Scanning {} ...".format(file_to_scan))
+          print(bgreen,"[+] Scanning {} ...".format(file_to_scan),bwhite)
+          if file_to_scan[0]== ".":
+              extention =  file_to_scan[1:] 
           try :   
-              if file_to_scan.split(".")[2] =="exe":
+              if extention.split(".")[1] =="exe":
                   
                   try : 
                       subprocess.call(['python3','Mal-detection.py', file_to_scan])
@@ -398,9 +405,9 @@ def malware_detection(diff):
 def api_virus_total(file):
     subprocess.call(['python3','virustotal.py','-m',file])
 def hand_sign(signum, frame):
-    res = input("Ctrl-c was pressed. Do you really want to exit? y/n ")
+    res = input("Ctrl-c was pressed. Do you really want to exit? y/n :")
     if res == 'y':
-    	print(red,"QUitting ! \n Saving the results in {} ".format(ALERT_FILE))
+    	print(red,"[x] Quitting!\n",bgreen,"[+] Saving the results in {} ".format(ALERT_FILE))
     	exit(1)
  
 signal.signal(signal.SIGINT, hand_sign)
@@ -422,7 +429,7 @@ if __name__ == "__main__":
     LOG_FILE = 'handler.log'
     list_to_ignore=[SCAN_STORAGE, LOG_FILE, ALERT_FILE]
     sleep_time_sc=4
-    #print(str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))+"\n")
+    print(str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))+"\n")
     #Starting the integrity monitor
     banner()
     integrity()
