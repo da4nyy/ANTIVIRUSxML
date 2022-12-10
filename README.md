@@ -6,211 +6,105 @@ This Python project is a project that combine between  :
 1. basic file integrity monitor: which it takes two arguments: a directory to scan, and an output file for alerts. The script will recursively scan the given directory and its subdirectories, and will create alerts for any added, removed, or changed files. The script uses the os, sys, and pickle libraries to perform file system operations, as well as the datetime, hashlib, logging, and time libraries for other operations.
 2. malware detection using machine learning : it helps train a classifier to be able to detect [PE files](https://en.wikipedia.org/wiki/Portable_Executable) as either malicious or legitimate. It tries out 6 different classification algorithms before deciding which one to use for prediction by comparing their results. 
 
-Dependencies
-============
-
-* pandas ```pip install pandas```
-* numpy ```pip install numpy```
-* pickle ```pip install pickle```
-* scipy ```pip install scipy```
-* scikit ```pip install -U scikit-learn```
-
-Use [pip](https://pypi.python.org/pypi/pip) to install any missing dependencies
-
-Basic Usage
-===========
-
-1. Run ```python learning.py``` to train the model. It will train on the dataset included called 'data.csv'.
-
-2. Once trained you can test the model via ```python checkpe.py YOUR_PE_FILE```. It will output either malicious or legitimate!
-
-That's it!
 
 
-# Table of Contents
+<div align="center">
 
-- [About the Project](#about-the-project)
-  * [Screenshots](#screenshots)
-  * [Tech Stack](#tech-stack)
-  * [Features](#features)
-  * [Color Reference](#color-reference)
-  * [Environment Variables](#environment-variables)
-- [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Running Tests](#running-tests)
-  * [Run Locally](#run-locally)
-  * [Deployment](#deployment)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-  * [Code of Conduct](#code-of-conduct)
-- [FAQ](#faq)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+  <h1>ANTIVIRUSXML</h1>
+  
+  <p>
+      File Integrity Monitor with Malware detection using Machine learning ! 
+  </p>
+
+  
+
+   
+
+</div>
+
+<br />
+
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: Table of Contents
+
+- [About the Project](#star2-about-the-project)
+- [Getting Started](#toolbox-getting-started)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Installation](#gear-installation)
+- [Usage](#eyes-usage)
+- [Contact](#handshake-contact)
+- [Acknowledgements](#gem-acknowledgements)
   
 
 <!-- About the Project -->
-## About the Project
+## :star2: About the Project
 
-
-<!-- Screenshots -->
-### Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/117517618/206859303-8042f133-5fa3-493a-9b3b-b65995f4ecef.png" alt="screenshot" />
 </div>
 
 
-<!-- TechStack -->
-### Tech Stack
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-    <li><a href="https://go.dev/">Golang</a></li>
-    <li><a href="https://nestjs.com/">Nest.js</a></li>
-    <li><a href="https://socket.io/">SocketIO</a></li>
-    <li><a href="https://www.prisma.io/">Prisma</a></li>    
-    <li><a href="https://www.apollographql.com/">Apollo</a></li>
-    <li><a href="https://graphql.org/">GraphQL</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
-    <li><a href="https://circleci.com/">CircleCLI</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-### Features
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-<!-- Color Reference -->
-### Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
 
-<!-- Env Variables -->
-### Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY`
 
-`ANOTHER_API_KEY`
 
 <!-- Getting Started -->
-## Getting Started
+## 	:toolbox: Getting Started
 
 <!-- Prerequisites -->
-### Prerequisites
+### :bangbang: Prerequisites
 
-This project uses Yarn as package manager
+This project uses some libraries that you need to install them first :
 
 ```bash
- npm install --global yarn
+ pip install -r requirements.txt
 ```
 
 <!-- Installation -->
-### Installation
+### :gear: Installation
 
 Install my-project with npm
 
 ```bash
-  yarn install my-project
-  cd my-project
+  git clone https://github.com/da4nyy/ANTIVIRUSxML/
+  cd ANTIVIRUSxML
 ```
-   
-<!-- Running Tests -->
-### Running Tests
 
-To run tests, run the following command
-
-```bash
-  yarn test test
-```
 
 <!-- Run Locally -->
-### Run Locally
+### :running: Run Locally
 
 Clone the project
 
-```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
-```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd ANTIVIRUSxML/
 ```
 
 Install dependencies
 
 ```bash
-  yarn install
+   pip install -r requirements.txt
 ```
 
-Start the server
+train the model ( you can skip this phase : you already find the files in the classifier directory
 
 ```bash
-  yarn start
-```
-
-
-<!-- Deployment -->
-### Deployment
-
-To deploy this project run
-
-```bash
-  yarn deploy
+   python3 Malware-detection-learning.py data.csv
 ```
 
 
 <!-- Usage -->
-## Usage
+## :eyes: Usage
 
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
-
++ You may monitor the integrity of the files that may have PII. In this case, you can place the script where your files live, and create a crontab or use task scheduler to run the script.
++ You can use the script to monitor the files stored in the web app and scan the added files.
++ If you are in the Blue Team at a CCDC competition, you can use this script to monitor your server and easily see which files modified.
 
 ```javascript
 import Component from 'my-project'
@@ -221,14 +115,13 @@ function App() {
 ```
 
 <!-- Roadmap -->
-## Roadmap
+## :compass: Roadmap
 
 * [x] Todo 1
 * [ ] Todo 2
 
-
 <!-- Contributing -->
-## Contributing
+## :wave: Contributing
 
 <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" />
@@ -241,38 +134,26 @@ See `contributing.md` for ways to get started.
 
 
 <!-- Code of Conduct -->
-### Code of Conduct
+### :scroll: Code of Conduct
 
 Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
 
-<!-- FAQ -->
-## FAQ
-
-- Question 1
-
-  + Answer 1
-
-- Question 2
-
-  + Answer 2
-
 
 <!-- License -->
-## License
+## :warning: License
 
 Distributed under the no License. See LICENSE.txt for more information.
 
 
 <!-- Contact -->
-## Contact
+## :handshake: Contact
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
 Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
 
-
 <!-- Acknowledgments -->
-## Acknowledgements
+## :gem: Acknowledgements
 
 Use this section to mention useful resources and libraries that you have used in your projects.
 
