@@ -64,7 +64,6 @@ This project uses some libraries that you need to install them first :
 <!-- Installation -->
 ### :gear: Installation
 
-Install my-project with npm
 
 ```bash
   git clone https://github.com/da4nyy/ANTIVIRUSxML/
