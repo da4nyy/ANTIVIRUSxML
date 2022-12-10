@@ -6,6 +6,7 @@
   
   <p>
       File Integrity Monitor with Malware detection using Machine learning 
+      <br>(tested only on linux)
   </p>
 
   
