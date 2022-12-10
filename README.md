@@ -140,6 +140,7 @@ Project Link: [https://github.com/](https://github.com/da4nyy/ANTIVIRUSxML)
 
  - [kaggle mai dali](https://www.kaggle.com/code/maidaly/malware-detection-with-machine-learning)
  - [Te-k](https://github.com/Te-k)
+ - [MaksimEkin- file integrity monitor](https://github.com/MaksimEkin/)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
 
 
