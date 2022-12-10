@@ -98,7 +98,7 @@ train the model ( you can skip this phase : you already find the files in the cl
 Start the file monitor and malware detection handler
 
 ```bash
-   python3 antivirusXml.py -i <input directory> -o <output directory>  
+   python3 antivirusXml.py -i <input directory to monitor> -o <output file>  
 ```
 
 <!-- Usage -->
