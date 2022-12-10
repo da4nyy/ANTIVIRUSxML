@@ -1,11 +1,3 @@
-# ANTIVIRUSxML
-
-Overview
-============
-This Python project is a project that combine between  :
-1. basic file integrity monitor: which it takes two arguments: a directory to scan, and an output file for alerts. The script will recursively scan the given directory and its subdirectories, and will create alerts for any added, removed, or changed files. The script uses the os, sys, and pickle libraries to perform file system operations, as well as the datetime, hashlib, logging, and time libraries for other operations.
-2. malware detection using machine learning : it helps train a classifier to be able to detect [PE files](https://en.wikipedia.org/wiki/Portable_Executable) as either malicious or legitimate. It tries out 6 different classification algorithms before deciding which one to use for prediction by comparing their results. 
-
 
 
 <div align="center">
@@ -13,7 +5,7 @@ This Python project is a project that combine between  :
   <h1>ANTIVIRUSXML</h1>
   
   <p>
-      File Integrity Monitor with Malware detection using Machine learning ! 
+      File Integrity Monitor with Malware detection using Machine learning 
   </p>
 
   
@@ -38,6 +30,12 @@ This Python project is a project that combine between  :
 
 <!-- About the Project -->
 ## :star2: About the Project
+
+Overview
+============
+This Python project is a project that combine between  :
+1. basic file integrity monitor: which it takes two arguments: a directory to scan, and an output file for alerts. The script will recursively scan the given directory and its subdirectories, and will create alerts for any added, removed, or changed files. The script uses the os, sys, and pickle libraries to perform file system operations, as well as the datetime, hashlib, logging, and time libraries for other operations.
+2. malware detection using machine learning : it helps train a classifier to be able to detect [PE files](https://en.wikipedia.org/wiki/Portable_Executable) as either malicious or legitimate. It tries out 6 different classification algorithms before deciding which one to use for prediction by comparing their results. 
 
 
 <div align="center"> 
@@ -98,6 +96,11 @@ train the model ( you can skip this phase : you already find the files in the cl
    python3 Malware-detection-learning.py data.csv
 ```
 
+Start the file monitor and malware detection handler
+
+```bash
+   python3 antivirusXml.py -i <input directory> -o <output directory>  
+```
 
 <!-- Usage -->
 ## :eyes: Usage
@@ -106,59 +109,38 @@ train the model ( you can skip this phase : you already find the files in the cl
 + You can use the script to monitor the files stored in the web app and scan the added files.
 + If you are in the Blue Team at a CCDC competition, you can use this script to monitor your server and easily see which files modified.
 
-```javascript
-import Component from 'my-project'
 
-function App() {
-  return <Component />
-}
-```
 
 <!-- Roadmap -->
 ## :compass: Roadmap
 
-* [x] Todo 1
-* [ ] Todo 2
+* [x] scan x32 PE files
+* [ ] scan x64 PE files
 
 <!-- Contributing -->
 ## :wave: Contributing
 
-<a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" />
+<a href="https://github.com/da4nyy/ANTIVIRUSxML/graphs/contributors">
+
 </a>
 
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
-
-
-<!-- Code of Conduct -->
-### :scroll: Code of Conduct
-
-Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
-
-
-<!-- License -->
-## :warning: License
-
-Distributed under the no License. See LICENSE.txt for more information.
-
 
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+kacem hakim - [@DARNY](https://twitter.com/darny74258511) - kacemhakim19@gmail.com
 
-Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
+Project Link: [https://github.com/](https://github.com/da4nyy/ANTIVIRUSxML)
 
 <!-- Acknowledgments -->
 ## :gem: Acknowledgements
 
-Use this section to mention useful resources and libraries that you have used in your projects.
-
- - [Shields.io](https://shields.io/)
+ - [kaggle mai dali](https://www.kaggle.com/code/maidaly/malware-detection-with-machine-learning)
+ - [Te-k](https://github.com/Te-k)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
- - [Readme Template](https://github.com/othneildrew/Best-README-Template)
+
+
 
