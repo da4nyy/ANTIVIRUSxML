@@ -131,7 +131,7 @@ Contributions are always welcome!
 <!-- Contact -->
 ## :handshake: Contact
 
-kacem hakim - [@DARNY](https://twitter.com/darny74258511) - kacemhakim19@gmail.com
+kacem hakim - [@DARNY](https://twitter.com/darny74258511) - da4nyyy@proton.me
 
 Project Link: [https://github.com/](https://github.com/da4nyy/ANTIVIRUSxML)
 
