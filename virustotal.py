@@ -19,7 +19,7 @@ class Colors:
     ENDC = '\033[0m'
 
 # VirusTotal API key
-VT_API_KEY = "425f8f84c850412868ad9be5f4f5d960e08b173f808565d0bc48808293e185b8  "
+VT_API_KEY = "< PUT UR KEY HERE >"
 
 # VirusTotal API v3 URL
 VT_API_URL = "https://www.virustotal.com/api/v3/"
